@@ -16,10 +16,11 @@ module.exports = function(robot) {
   var postRoom = process.env.HUBOT_SLACK_EVENING_MEETING_ROOM;
   var postMessage = '';
   postMessage += '@here\n';
-  postMessage += 'みなさん、オツカレサマデシタ。\n';
-  postMessage += '夕会の時間ですヨ。';
+  postMessage += 'みなさま、オツカレサマデス。\n';
+  postMessage += 'もうすぐ夕会の時間ですヨ。\n';
+  postMessage += '┏┫￣皿￣┣┛';
   cron.schedule(
-    '0 25 18 * * 1-5',
+    '0 15 18 * * 1-5',
     function() {
       robot.logger.info('Post the Evening Meeting!');
       return robot.send({ room: postRoom }, postMessage);
