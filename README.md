@@ -1,2 +1,3 @@
 # teijikun2
-Teijikun2 is the Slack bot for Creema Engineers
+
+teijikun2 is a slack bot for the Creema Engineers.
