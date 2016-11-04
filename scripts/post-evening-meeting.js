@@ -10,20 +10,23 @@
 // Commands:
 //   None
 
-var cron = require('node-cron');
+var CronJob = require('cron').CronJob;
 
 module.exports = function(robot) {
   var postRoom = process.env.HUBOT_SLACK_EVENING_MEETING_ROOM;
+
   var postMessage = '';
   postMessage += '@here\n';
   postMessage += 'みなさま、オツカレサマデス。\n';
   postMessage += 'もうすぐ夕会の時間ですヨ。\n';
   postMessage += '┏┫￣皿￣┣┛';
-  cron.schedule(
-    '0 15 18 * * 1-5',
+
+  new CronJob(
+    //'00 15 18 * * 1-5',
+    '00 26 00 * * 1-5',
     function() {
+      robot.send({ room: postRoom }, postMessage);
       robot.logger.info('Post the Evening Meeting!');
-      return robot.send({ room: postRoom }, postMessage);
     }
-  );
+  ).start();
 };

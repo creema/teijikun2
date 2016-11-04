@@ -16,6 +16,7 @@ module.exports = function(robot) {
     replyMessage += '@himejima\n';
     replyMessage += 'お風呂入りましたか？\n';
     replyMessage += '┏┫￣皿￣┣┛';
+
     message.send(replyMessage);
     robot.logger.info('Post the ofuro reply.');
   });
