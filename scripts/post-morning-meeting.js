@@ -22,11 +22,14 @@ module.exports = function(robot) {
   postMessage += '┏┫￣皿￣┣┛ .｡oO（祝日だったらゴメンナサイ）';
 
   new CronJob(
-    //'00 25 09 * * 1-5',
-    '00 25 00 * * 1-5',
+    '00 25 09 * * 1-5',
+    //'00 25 00 * * 1-5',
     function() {
       robot.send({ room: postRoom }, postMessage);
       robot.logger.info('Post the Morning Meeting!');
-    }
-  ).start();
+    },
+    null,
+    true,
+    'Asia/Tokyo'
+  );
 };
