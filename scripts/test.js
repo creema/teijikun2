@@ -20,10 +20,13 @@ module.exports = function(robot) {
   postMessage += 'みなさん、テスト投稿ですよ。';
 
   new CronJob(
-    '00 22 00 * * 1-5',
+    '00 10 10 * * 1-5',
     function() {
       robot.send({ room: postRoom }, postMessage);
       robot.logger.info('Post a test message!');
-    }
-  ).start();
+    },
+    null,
+    true,
+    'Asia/Tokyo'
+  );
 };

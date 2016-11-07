@@ -14,8 +14,8 @@ var CronJob = require('cron').CronJob;
 
 module.exports = function(robot) {
   new CronJob(
-    //'00 00 11 * * 1-5',
-    '00 23 00 * * 1-5',
+    '00 00 11 * * 1-5',
+    //'00 23 00 * * 1-5',
     function() {
       var postRoom = process.env.HUBOT_SLACK_PULLREQUEST_CHECK_ROOM;
 
@@ -26,12 +26,15 @@ module.exports = function(robot) {
 
       robot.send({ room: postRoom }, postMessage);
       robot.logger.info('Post the morning PR Check!');
-    }
-  ).start();
+    },
+    null,
+    true,
+    'Asia/Tokyo'
+  );
 
   new CronJob(
-    //'00 00 14 * * 1-5',
-    '00 24 00 * * 1-5',
+    '00 00 14 * * 1-5',
+    //'00 24 00 * * 1-5',
     function() {
       var postRoom = process.env.HUBOT_SLACK_PULLREQUEST_CHECK_ROOM;
 
@@ -42,6 +45,9 @@ module.exports = function(robot) {
 
       robot.send({ room: postRoom }, postMessage);
       robot.logger.info('Post the afternoon PR Check!');
-    }
-  ).start();
+    },
+    null,
+    true,
+    'Asia/Tokyo'
+  );
 };
