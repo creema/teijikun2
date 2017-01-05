@@ -19,6 +19,8 @@ module.exports = function(robot) {
   postMessage += '@here\n';
   postMessage += 'みなさま、オツカレサマデス。\n';
   postMessage += 'もうすぐ夕会の時間ですヨ。\n';
+  postMessage += '\n';
+  postMessage += '退勤対応、ｵﾜｽﾚﾅｷﾖｳ...\n';
   postMessage += '┏┫￣皿￣┣┛';
 
   new CronJob(

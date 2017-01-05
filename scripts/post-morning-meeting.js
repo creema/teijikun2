@@ -17,8 +17,10 @@ module.exports = function(robot) {
 
   var postMessage = '';
   postMessage += '@here\n';
-  postMessage += 'みなさま、オハヨウゴザイマス。\n';
-  postMessage += 'もうすぐ朝会の時間ですヨ。\n';
+  postMessage += 'みなさま、ｵﾊﾖｳｺﾞｻﾞｲﾏｽ。\n';
+  postMessage += 'もうすぐ朝会の時間ﾃﾞｽﾖ。\n';
+  postMessage += '\n';
+  postMessage += 'ﾀｲﾑｶｰﾄﾞ、ｵﾜｽﾚﾅｷﾖｳ...\n';
   postMessage += '┏┫￣皿￣┣┛ .｡oO（祝日だったらゴメンナサイ）';
 
   new CronJob(
