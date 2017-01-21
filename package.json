@@ -6,6 +6,7 @@
   "description": "Teijikun2 is the Slack bot for Creema Engineers",
   "dependencies": {
     "cron": "^1.1.1",
+    "ejs": "^2.5.5",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
