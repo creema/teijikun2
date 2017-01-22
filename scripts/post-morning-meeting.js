@@ -17,9 +17,13 @@ module.exports = function(robot) {
   var postRoom = process.env.HUBOT_SLACK_MORNING_MEETING_ROOM;
   var postMessage = '';
 
+  var data = {
+    additional_content_first: process.env.HUBOT_SLACK_MEETING_ADDITINAL_CONTENT_FIRST
+  };
+
   Common.loadView(
     'morning-meeting.ejs',
-    {},
+    data,
     function(result) {
       postMessage = result;
     },
