@@ -18,7 +18,7 @@ module.exports = function(robot) {
   var postMessage = '';
 
   var data = {
-    additional_content_first: process.env.HUBOT_SLACK_MEETING_ADDITINAL_CONTENT_FIRST
+    additional_content_first: process.env.HUBOT_SLACK_MEETING_ADDITINAL_CONTENTS
   };
 
   Common.loadView(
