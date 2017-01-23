@@ -19,7 +19,7 @@ module.exports = function(robot) {
   var postMessage2 = '';
 
   var data = {
-    additional_contents: process.env.HUBOT_SLACK_PULLREQUEST_ADDITINAL_CONTENTS
+    additional_contents: process.env.HUBOT_SLACK_PULLREQUEST_ADDITIONAL_CONTENTS
   };
 
   Common.loadView(
